@@ -203,6 +203,7 @@ class ROSGPTProxy(Resource):
             response = openai.ChatCompletion.create(
                 model="gpt-3.5-turbo",
                 messages=messages,
+                api_key=openai_api_key 
             )
         except openai.error.InvalidRequestError as e:
             print(f"Error: {e}")
